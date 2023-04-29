@@ -52,10 +52,30 @@
  margin: auto;
  border-radius: 10px;
 }
+.aru{
+  background-color: #e6e6e6;
+  color: #333;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
     </style>
-  </head>
+    <audio id="myAudio">
+      <source src="bohemio.mp3" type="audio/mp3">
+   </audio>
+</head>
   <body>
     <h1>Inside my head</h1>
+    <div class="sidebar">
+      <button onclick="playAudio()">Play</button>
+      <button onclick="pauseAudio()">Pausa</button>
+      <input type="range" id="volumeSlider" min="0" max="100" value="50">
+      <span class="player-text">Bohemio - Andres Calamaro</span>
+    </div>
     
     <h2><span style="font-size: 24px; font-style: italic;">Domingo, 16 de abril de 2023</span></h2>
     <p>No sé.<br></br></p>
@@ -176,5 +196,37 @@
 <p>No tengo nada más que decir por ahora...</p>
 <img src="https://i.ibb.co/7WbTVRb/Captura-de-pantalla-2023-04-28-151720.png" alt="nada que decir. XD">
 <p>PD: Superé los 1000. Waos.</p>
+<br>
+<br>
+<p>Hora de intentar ser algo honesto, no me he sentido bien y pues se lo he contado, me he puesto muy pesimista
+  y no me gustó haber sido así porque sé que en gran medida tambien la afecta, perdoname por eso. Perdón por desconfiar,
+  no han sido para nada dias buenos pero sigo intentandolo y es gracias a ti, a que te tengo. 
+</p>
+<br>
+<p>Mañana ya me toca ir al turno mañana donde esta mucha gente que no quisiera ver naturalmente pero tengo que 
+  hacer ese esfuerzo para poder seguir estudiando y lograr ingresar, 2 meses y ya saqué +1000, aún faltan más meses 
+  para estudiar y poder sacar mas puntaje para asi asegurar mi ingreso a la primera. Gracias a quien esté leyendo esto en
+  cualquier momento.
+</p>
+<br>
+<p>Hoy Aru no ha estado mucho y la extraño, espero que este bien y no sea nada malo.</p>
+<audio id="audioaru" src="bo-cut.mp3"></audio>
+<a class="aru" onmousedown="document.getElementById('audioaru').play()">Para Aru &#x1F47B</a>
+<script>
+  var myAudio = document.getElementById("myAudio");
+  var volumeSlider = document.getElementById("volumeSlider");
+  
+  function playAudio() {
+    myAudio.play();
+  }
+  
+  function pauseAudio() {
+    myAudio.pause();
+  }
+  
+  volumeSlider.oninput = function() {
+    myAudio.volume = volumeSlider.value / 100;
+  }
+  </script>
   </body>
 </html>
