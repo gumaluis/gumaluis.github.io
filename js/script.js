@@ -10,7 +10,7 @@ const sr = ScrollReveal ({
     distance: '65px',
     duration: 2600,
     delay: 450,
-    reset: true
+    reset: false
 });
 
 sr.reveal('.hero-text',{delay:200, origin:'top'});
