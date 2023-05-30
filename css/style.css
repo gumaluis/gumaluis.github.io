@@ -27,18 +27,19 @@ body{
 header{
     position: fixed;
     width: 100%;
-    height: 35px;
+    top: 0;
+    right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2e056b;
+    background: transparent;
     transition: .3s;
 }
 
 .logo{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 600;
     color:white;
 }
 
@@ -48,13 +49,15 @@ header{
 
 .navlist a{
     color: var(--text-color);
-    font-size: 1rem;
-    padding: 5px 10px;
-    font-weight: 500;
+    font-size: 15px;
+    margin-left: 30px;
+    font-weight: 600;
+border-bottom: 2px solid transparent;
+transition: all .55 ease;
 }
 
 .navlist a:hover{
-    background: #24f2df;
+    border-bottom: 2px solid white;
     transition: .3s;
 }
 
@@ -287,7 +290,7 @@ section{
 }
 
 span{
- color: var(--main-color);
+ color: white;
  }
 
 .btn{
@@ -314,6 +317,7 @@ span{
     grid-template-columns: repeat(2, 2fr);
     grid-gap: 5rem;
     align-items: center;
+    padding-top: 75px;
 }
 
 .about-text{
@@ -387,6 +391,11 @@ span{
     grid-gap: 2rem;
     align-items: center;
     margin-top: 4.4rem;
+    
+}
+
+.services{
+    padding-top: 100px;
 }
 
 .row{
@@ -450,6 +459,10 @@ span{
     margin-top: 4.4rem;
 }
 
+.resume{
+    padding-top: 100px;
+}
+
 .box{
     background: #2e056b;
     padding: 40px 30px;
@@ -503,6 +516,10 @@ span{
     width: 550px;
 }
 
+.contact{
+    padding-top: 100px;
+}
+
 form input,
 form textarea{
     width: 100%;
@@ -554,3 +571,5 @@ form .send-btn:hover{
     margin-top: 3rem;
     line-height: 1.8rem;
 }
+
+
