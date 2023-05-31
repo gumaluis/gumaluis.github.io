@@ -62,8 +62,7 @@ transition: all .55 ease;
 }
 
 #menu-icon{
-    color: white;
-    font-size: 35px;
+    font-size: 28px;
     z-index: 10001;
     cursor: pointer;
     display: none;
@@ -91,6 +90,16 @@ section{
     margin-bottom: 40px;
 }
 
+.hero-text span{
+    color: #24f2df;
+}
+
+.hero-text h6{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
 .hero-text h1{
     font-family: 'Pacifico', cursive;
     font-size: 90px;
@@ -110,12 +119,12 @@ section{
     color: white;
     font-size: 15px;
     line-height: 1.9;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .hero-img img{
     max-width: 100%;
-    width: 350px;
+    width: 700px;
     height: auto;
 }
 
@@ -189,104 +198,6 @@ section{
 
 .scroll-down i:hover{
     transform: translateY(-5px);
-}
-
-@media (max-width: 1535px){
-    header{
-        padding: 15px 3%;
-        transition: .2s;
-    }
-    .icons{
-        padding: 0 3%;
-        transition: .2s;
-    }
-    .scroll-down{
-        right: 3%;
-        transition: .2s;
-    }
-}
-
-@media (max-width: 1460px){
-    section{
-        padding: 0 12%;
-        transition: .2s;
-    }
-}
-
-@media (max-width: 1340px){
-    .hero-img img{
-        width: 80%;
-        height: auto;
-    }
-    .hero-text h1{
-        font-size: 75px;
-        margin: 0 0 30px;
-    }
-    .hero-text h5{
-        margin-bottom: 25px;
-    }
-}
-
-@media (max-width: 1195px){
-    section{
-        padding: 0 3%;
-        transition: .2s;
-    }
-    .hero-text{
-        padding-top: 115px;
-    }
-    .hero-img{
-        text-align: center;
-    }
-    .hero-img img{
-        width: 50%;
-        height: auto;
-    }
-    .hero{
-        height: 100%;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-    }
-    .icons{
-        display: none;
-    }
-    .scroll-down{
-        display: none;
-    }
-}
-
-@media (max-width: 990px){
-    #menu-icon{
-        display: block;
-    }
-    .navlist{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 200px;
-        height: 250px;
-        background: #5515b5;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 50px 20px;
-        transition: all .55 ease;
-    }
-    .navlist a{
-        margin-left: 0;
-        display: block;
-        margin: 7px 0;
-    }
-    .navlist.open{
-        right: 0;
-    }
-}
-
-@media (max-width: 680px){
-    .hero-img img{
-        width: 70%;
-        height: auto;
-    }
 }
 
 span{
@@ -572,4 +483,36 @@ form .send-btn:hover{
     line-height: 1.8rem;
 }
 
+@media (max-width: 1535px){
+    header{
+        padding: 25px 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1460px){
+    section{
+        padding: 50 3%;
+        transition: .2s;
+    }
+    :root{
+        --big-font: 3rem;
+        --h2-font: 1.rem;
+    }
+}
+
+@media (max-width: 1260px){
+    .hero{
+        padding-top: 100px;
+    }
+    .hero-img{
+        max-width: 70%;
+        width: 600px;
+        height: auto;
+    }
+}
 
