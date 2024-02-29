@@ -17,7 +17,7 @@ function random(nobtn) {
   if (count >= 10) {
     document.getElementById("yesbtn").classList.add("ics");
     let interval = setInterval(() => {
-      nobtn.style.opacity = count / 10;
+      nobtn.style.opacity = count / 100;
       count--;
       if (count <= 0) {
         nobtn.style.display = "none";
