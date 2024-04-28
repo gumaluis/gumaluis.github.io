@@ -303,6 +303,7 @@ span{
     align-items: center;
     margin-top: 4.4rem;
     
+    
 }
 
 .services{
@@ -507,3 +508,6 @@ span{
     }
 }
 
+.texto-rojo {
+    color: #24f2df;
+}
