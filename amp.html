@@ -25,6 +25,12 @@
     background: rgb(56, 7, 131);
     padding: 20px; /* Ajusta el espaciado interno según sea necesario */
     margin-top: 20px; /* Agrega un margen superior para separarlo del contenido anterior */}
+    .CUERRE{
+font-size: 20px;
+font-weight: 600;
+color:white;
+margin-right: 20px;
+}
     
     </style>
 
@@ -68,7 +74,45 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
     <header>
         <a href="https://gumaluis.github.io/" class="logo">GUMALUIS</a>
-      </header>
+        <a href="#" onclick="mostrarCuadro()" class="CUERRE">GENERAR QR</a>
+    </header>
+
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000;">
+      <div id="dialog" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(56, 7, 131); padding: 20px; border-radius: 5px;">
+        <button onclick="cerrarCuadro()" style="position: absolute; top: 10px; right: 10px;">Cerrar</button>
+        <label for="url">Ingresa el enlace:</label>
+        <input type="text" id="url">
+        <button onclick="generarQR()">Generar QR</button>
+        <div id="qrCodeContainer" style="text-align: center;"></div>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+      function mostrarCuadro() {
+        document.getElementById('overlay').style.display = 'block';
+      }
+    
+      function cerrarCuadro() {
+        document.getElementById('overlay').style.display = 'none';
+      }
+    
+      function generarQR() {
+        var url = document.getElementById('url').value;
+        var qrCode = new QRious({
+          element: document.getElementById('qrCodeContainer'),
+          value: url,
+          size: 500
+        });
+    
+        // Abrir una nueva ventana con el código QR
+        var nuevaVentana = window.open('', '_blank');
+        nuevaVentana.document.write('<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">');
+        nuevaVentana.document.write('<img src="' + qrCode.toDataURL() + '">');
+        nuevaVentana.document.write('</div>');
+      }
+    </script>
+
 </body>
 
 <section class="services" id="services">
