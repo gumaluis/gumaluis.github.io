@@ -31,13 +31,19 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleccionamos el elemento de texto clickeable
-    const clickableText = document.querySelector('.clickable-text');
+    // Seleccionamos todos los elementos de texto clickeables
+    const clickableTexts = document.querySelectorAll('.clickable-text');
 
-    // Agregamos el evento de clic
-    clickableText.addEventListener('click', () => {
-        // Mostramos el mensaje emergente
-        alert('¡Haz clickeado en el texto "ZERI"!');
+    // Iteramos sobre los elementos y agregamos el evento de clic a cada uno
+    clickableTexts.forEach(text => {
+        text.addEventListener('click', () => {
+            // Obtenemos el mensaje asociado al texto clickeado
+            const message = text.getAttribute('data-message');
+            // Reemplazamos los saltos de línea con '\n' por saltos de línea reales
+            const formattedMessage = message.replace(/\\n/g, '\n');
+            // Mostramos el mensaje emergente
+            alert(formattedMessage);
+        });
     });
 });
 </script>
@@ -68,6 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="services" id="services">
     <div class="center">
       <h3>ADMINISTRACIÓN MARÍTIMA Y PORTUARIA B24</h3>
+      <br>
+      <h4>⚠️ TAREA</h4>
+      <h4>❗ PARCIAL</h4>
     </div>
     <div class="service-content">
 
@@ -80,7 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </p>
         <div class="cuadro-color">  <!-- TAREA DESARROLLO PERSONAL -->
           <p>
-            <span class="clickable-text">ZERI</span>
+            <span class="clickable-text" data-message="Fecha límite: Domingo 12\nUbicación: / Sesión 7 / Entrega de la PIRÁMIDE PERSONAL\nDescripción: Realizar una pirámide según Maslow con mínimo 3 necesidades que sean algo específicas para su propia persona.">⚠️ Envío pirámide de Maslow.</span> <br>
+            <span class="clickable-text" data-message="Fecha límite: Domingo 12\nUbicación: / EXAMEN PARCIAL - SESIÓN 8 /\nDescripción: Crear una carpeta en la ubicación indicada y adjuntar dentro el archivo de proyecto de vida completado y un PPT con elementos de nuestro proyecto de vida. Se expone el Lunes 13 con vestimenta formal.">❗Entrega Proyecto de vida.</span>
           </p>
       </div>
         </p>
@@ -92,6 +102,11 @@ document.addEventListener('DOMContentLoaded', function() {
         <p>Docente: <span class="texto-rojo">Marcelo Quispe, Roberto Carlos.</span>
             Delegada: <span class="texto-rojo">Ricra Villena, Andrea Amanda.</span><p></p><br>
             <a href="https://drive.google.com/drive/folders/1M3M2-mQdcD47hnfqOwhti2Fu07ckvPLv" target="_blank" class="texto-drive">Drive de Lenguaje.</a>
+        </p>
+        <div class="cuadro-color">  <!-- TAREA DESARROLLO PERSONAL -->
+        <p>
+          <span class="clickable-text" data-message="Fecha revisión: Domingo 12\nFecha presentación: Martes 14\nUbicación: / 1 - TAREAS SEMANALES / SEMANA 6 - MONOGRAFÍA / EQUIPO X\nDescripción: Entrega de la monografía terminada (PDF) y PPT acerca de la monografía para exposición formal.">❗ Exposición de monografía.</span> <br>
+       </div>
         </p>
       </div>
 
