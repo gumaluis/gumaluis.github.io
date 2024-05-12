@@ -21,7 +21,26 @@
     /* Ajusta otros estilos según sea necesario */
 
     }
+    .cuadro-color {
+    background: rgb(56, 7, 131);
+    padding: 20px; /* Ajusta el espaciado interno según sea necesario */
+    margin-top: 20px; /* Agrega un margen superior para separarlo del contenido anterior */}
+    
     </style>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionamos el elemento de texto clickeable
+    const clickableText = document.querySelector('.clickable-text');
+
+    // Agregamos el evento de clic
+    clickableText.addEventListener('click', () => {
+        // Mostramos el mensaje emergente
+        alert('¡Haz clickeado en el texto "ZERI"!');
+    });
+});
+</script>
       <!-----custom css zelda-->
       <link rel="stylesheet" type="text/css" href="css/style.css">
       
@@ -59,6 +78,11 @@
             Delegado: <span class="texto-rojo">Camacho Tisnado, Luis Angel.</span><p></p><br>
             <a href="https://drive.google.com/drive/folders/18CJDOOzCwT-5S6SMCqkHfRz11eQsrehg?usp=sharing" target="_blank" class="texto-drive">Drive de Desarrollo Personal.</a>
         </p>
+        <div class="cuadro-color">  <!-- TAREA DESARROLLO PERSONAL -->
+          <p>
+            <span class="clickable-text">ZERI</span>
+          </p>
+      </div>
         </p>
       </div>
 
@@ -78,6 +102,7 @@
             Delegado: <span class="texto-rojo">Camacho Tisnado, Luis Angel.</span><p></p><br>
             <a href="https://drive.google.com/drive/folders/1CwVYfEveifIidB-xIWaErJXJP6j2Xphj" target="_blank" class="texto-drive">Drive de Matemática I.</a>
         </p>
+        
       </div>
 
       <div class="row">
@@ -106,7 +131,6 @@
             <a href="https://drive.google.com/drive/folders/1RYfJkJD6P1hs5HZKcfMQeHqj0FhN_2rs" target="_blank" class="texto-drive">Drive de Métodos de Estudio Universitario.</a>
         </p>
       </div>
-
     </div>
   </section>
   <iframe id="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=America%2FLima&bgcolor=%23ffffff&showPrint=0&showTitle=0&showDate=0&src=YWRteXBiMjRAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ucGUjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" padding="auto" scrolling="no"></iframe>
