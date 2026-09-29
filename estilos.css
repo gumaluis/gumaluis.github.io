@@ -1,0 +1,44 @@
+body {
+  background-color: #fff3e0;
+  color: #1a1410;
+  font-family: Poppins, "Trebuchet MS", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+h2, h3, #menu, #etiqueta {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h2 { font-size: 32px; text-shadow: 3px 3px 0 #e8863a; }
+h3 { font-size: 19px; color: #d9701f; }
+
+a:link, a:visited { color: #d9701f; }
+a:hover { color: #1a1410; }
+
+#menu { background-color: #1a1410; font-size: 14px; line-height: 3; }
+#menu a { text-decoration: none; }
+#menu a:link, #menu a:visited { color: #fde7c7; }
+#menu a:hover { color: #e8863a; }
+
+#portada, #avance, #formatos, #ofertas, #complementos, #pie { background-color: #8fcfee; }
+#categorias, #pedidos, #precios, #combos { background-color: #fde7c7; }
+#contacto { background-color: #1a1410; color: #fde7c7; }
+
+#etiqueta { font-size: 15px; color: #fde7c7; text-shadow: 1px 1px 0 #1a1410; }
+#frase { font-style: italic; font-size: 24px; }
+#pie { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
+
+th { background-color: #1a1410; color: #fde7c7; letter-spacing: 3px; text-transform: uppercase; line-height: 2.4; }
+th[colspan] { background-color: #e8863a; color: #1a1410; }
+td { background-color: #fff3e0; line-height: 2.2; }
+
+#combos strong { color: #d9701f; font-size: 20px; }
+
+#contacto h2 { color: #fde7c7; }
+#contacto h3 { color: #8fcfee; }
+#contacto a:link, #contacto a:visited { color: #e8863a; }
+#contacto a:hover { color: #fde7c7; }
