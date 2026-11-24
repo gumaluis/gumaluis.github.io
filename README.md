@@ -1,1 +1,0 @@
-# gumaluis.github.io
